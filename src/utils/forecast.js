@@ -16,7 +16,8 @@ module.exports = (lat, long, callback) => {
             //const { temperature, precip, feelslike, weather_descriptions } = current;
             callback(undefined, {
                 temperature: current.temperature,
-                forecast: current.weather_descriptions.join(", ")
+                forecast: current.weather_descriptions.join(", "),
+                feelsLike: current.feelslike
 
             })
 
