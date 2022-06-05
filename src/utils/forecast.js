@@ -1,6 +1,6 @@
 const request = require('postman-request');
 
-API_KEY = '974fecc5a8d2a50dd6b4f4ed4fa6a1ad'
+API_KEY = process.env.API_KEY || ''
 
 module.exports = (lat, long, callback) => {
 

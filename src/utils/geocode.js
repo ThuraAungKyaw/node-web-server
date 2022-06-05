@@ -1,7 +1,8 @@
 const request = require('postman-request');
 
-ENDPOINT = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
-MP_TOKEN = 'pk.eyJ1IjoidGh1cmFhdW5na3lhdyIsImEiOiJjbDFxZG91MWgwMGVrM2JxczdjNXBtbzBjIn0.rE1ZRhCVvyRjtT44hG2RDw'
+ENDPOINT = process.env.ENDPOINT || ''
+MP_TOKEN = process.env.MP_TOKEN || ''
+
 module.exports = (place, callback) => {
 
     const url = `${ENDPOINT}${encodeURIComponent(place)}.json?access_token=${MP_TOKEN}&limit=1`

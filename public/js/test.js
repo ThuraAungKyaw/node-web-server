@@ -5,12 +5,12 @@ fetch('https://puzzle.mead.io/puzzle').then(async (response) => {
     console.log(res)
 })
 
-fetch('http://localhost:3000/weather?address=Boston').then(async (response) => {
+fetch('/weather?address=Boston').then(async (response) => {
     const res = await response.json()
     console.log(res)
 })
 
-fetch('http://localhost:3000/weather?address=Bodfegston').then(async (response) => {
+fetch('/weather?address=Bodfegston').then(async (response) => {
     const res = await response.json()
     console.log(res)
 })
@@ -28,7 +28,7 @@ results.classList.add("result-list");
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = address.value;
-    fetch('http://localhost:3000/weather?address=' + location).then(async (response) => {
+    fetch('/weather?address=' + location).then(async (response) => {
         const res = await response.json()
         const resultList = document.querySelectorAll(".result-list p");
         for (let element of resultList) {
